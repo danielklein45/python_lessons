@@ -1,10 +1,10 @@
 # -------------------------------------------------------------------------------
 # Name:        OO class ex2
-# Purpose:
+# Purpose:     EX2
 #
-# Author:      
+# Author:      Daniel Klein 301344891 Pavel Jirnov 321728131
 #
-# Created:     
+# Created:     3.9.2016
 #-------------------------------------------------------------------------------
 
 
@@ -230,7 +230,7 @@ class Check_Range_Mixin(Check_Mixin):
 
     def check(self):
         # YOU – return True if user_answer is in range
-        return self.range_from > self.user_answer or self.range_to < self.user_answer
+        return self.range_from < self.user_answer or self.range_to > self.user_answer
         
     def compute_grade(self):
         # YOU – if user answer is exactly like right_answer then the grade is grade_value
@@ -256,7 +256,7 @@ class Check_American_Mixin(Check_EQ_Mixin):
         if self.user_answer == self.right_answer:
             self._grade_user = self._grade_value
         else:
-            self._grade_user -= 1/len(self.list_answer) * self._grade_value
+            self._grade_user = self._grade_value - (1/len(self.list_answers) * self._grade_value)
 
 
 class Check_American_Multi_Mixin(Check_Mixin):
