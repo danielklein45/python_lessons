@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e6dfb7db-deec-4eee-8de0-23ce385e9e94" name="Default" comment="" />
+    <list default="true" id="e6dfb7db-deec-4eee-8de0-23ce385e9e94" name="Default" comment="">
+      <change type="DELETED" beforePath="C:\Users\danielk\Documents\Studies\Python\python_lessons\Exercise3\Excercise3.py" afterPath="" />
+    </list>
     <ignored path="python_lessons.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,10 +24,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file leaf-file-name="Excercise3.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Exercise3/Excercise3.py">
+        <entry file="file://$PROJECT_DIR$/Excercise3/Excercise3.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.625">
-              <caret line="15" column="43" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
+            <state vertical-scroll-proportion="0.5833333">
+              <caret line="14" column="47" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -111,7 +113,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Exercise3" />
+              <option name="myItemId" value="Excercise3" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -351,10 +353,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Exercise3/Excercise3.py">
+    <entry file="file://$PROJECT_DIR$/Excercise3/Excercise3.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.625">
-          <caret line="15" column="43" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
+        <state vertical-scroll-proportion="0.5833333">
+          <caret line="14" column="47" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
           <folding />
         </state>
       </provider>
