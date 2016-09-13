@@ -102,6 +102,57 @@ def f321_with_cache():
     return cache321
 
 
+# Question 3
+ls_none = None  # global variable
+
+
+def check_none_wrapper(func):
+    def wrf(*args, **kwargs):
+        ls_none = []
+        print(args, kwargs)
+        for idx, arg in enumerate(args):
+            if arg is None:
+                print("Positional arg no {0} is None".format(idx))
+                ls_none.append(idx)
+        for idx, arg in enumerate(kwargs):
+            if kwargs[arg] is None:
+                print("keyword arg ==> {0} is None".format(arg))
+                ls_none.append(arg)
+        print("ls_none = {0}".format(ls_none))
+        _result = func(*args, **kwargs)
+        return _result
+
+    return wrf
+
+
+def add3(a=None, b=None, c=None):
+    if a is None:
+        a = 0
+    if b is None:
+        b = 0
+    if c is None:
+        c = 0
+    return a+b+c
+
+
+def test_check_none():
+    for k in range(1, 5):
+        if k == 1:
+            add3_with_check = check_none_wrapper(add3)
+            r1 = add3_with_check(1, 2, 3)
+        if k == 2:
+            add3_with_check = check_none_wrapper(add3)
+            r2 = add3_with_check(1, 2, None)
+        if k == 3:
+            add3_with_check = check_none_wrapper(add3)
+            r3 = add3_with_check(1, b=None)
+        if k == 4:
+            add3_with_check = check_none_wrapper(add3)
+            r4 = add3_with_check(1, None, c=None)
+    return (r1, r2, r3, r4)
+
+
+
 if __name__ == '__main__':
     # test question1
     print("Question1")
@@ -123,5 +174,7 @@ if __name__ == '__main__':
     print(f321(7))
     d = f321.get_cache
     print(sorted(d.items()))
+    print("Question3")
+    print(test_check_none())
 
 
