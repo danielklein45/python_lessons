@@ -152,6 +152,50 @@ def test_check_none():
     return (r1, r2, r3, r4)
 
 
+# Bonus
+def test_do_calc():
+    for k in range(1, 5):
+        if k == 1:
+            r1 = do_calc(1, 7, 4)
+        if k == 2:
+            r2 = do_calc(2, 7, 4)
+        if k == 3:
+            r3 = do_calc(3, 7, 4)
+        if k == 4:
+            r4 = do_calc(4, 7, 4)
+
+    return (r1, r2, r3, r4)
+
+
+def do_calc(k, a, b):
+    DictCases = {1: lambda a, b: a + b,
+                 2: lambda a, b: a - b,
+                 3: lambda a, b: a * b,
+                 4: lambda a, b: a / b,
+                 'default': lambda x: a + b}
+    func = sc_switch(k, DictCases)
+    return func(a, b)
+
+
+def sc_switch(k, zDictCases):
+    """
+    simulate switch statement with cases in Dict
+    'default' is used if case was not found
+    if 'default is not defined in
+    :param zDictCases: dictionary with cases
+    :param k: selected case
+    :return:
+    """
+    if k in zDictCases:
+        fn = zDictCases[k]
+        return fn
+
+    if 'default' in zDictCases:
+        fn = zDictCases['default']
+        return fn
+
+    return None
+
 
 if __name__ == '__main__':
     # test question1
@@ -176,5 +220,7 @@ if __name__ == '__main__':
     print(sorted(d.items()))
     print("Question3")
     print(test_check_none())
+    print("Bonus")
+    print(test_do_calc())
 
 
