@@ -301,9 +301,9 @@ def test2():
     r3 = [x * x if x > 5 else 0 for x in compL1]
     r4 = [x * x if x > 5 else 0 for x in compL1 if x > 3]
     r5 = [(x, y) for x in compL1 if x > 7 for y in compL2 if y > 7]
-    #r6 = [x+y for y in compL2 if y < 4 for x,y in compL1 if x < 4] # need to fix
-    #r6 = map(list, r6)
-    rs = [r1, r2, r3, r4, r5]#, r6]
+    r6 = [[b + a for a in compL1 if a < 4] for b in compL2 if b < 4]
+    r6 = map(list, r6)
+    rs = [r1, r2, r3, r4, r5, r6]
     ls_rs = list(list(ls) for ls in rs)
     for ls in ls_rs: print(ls)
     return ls_rs
